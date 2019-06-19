@@ -1,0 +1,20 @@
+echo ".bash_prompt";
+
+orange=$(tput setaf 166);
+yellow=$(tput setaf 228);
+green=$(tput setaf 71);
+white=$(tput setaf 15);
+bold=$(tput bold);
+reset=$(tput sgr0);
+
+PS1="\[\033]0;\w\007\]";         #Set terminal title to working directory
+PS1+="\[${bold}\]\n";
+PS1+="\[${orange}\]\u";         # user
+PS1+="\[${white}\]@";           # @
+PS1+="\[${yellow}\]\h";         # hostname
+PS1+="\[${white}\] in";         # in
+PS1+="\[${green}\] \W"          # working directory
+PS1+="\[$(tput sgr0)\]";        # reset
+PS1+="\n";                      # new line
+PS1+="\[${white}\]\$ \[${reset}\]";
+export PS1;
