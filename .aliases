@@ -1,0 +1,7 @@
+echo ".aliases"
+
+colorflag="-G"
+export LSCOLORS='BxBxhxDxfxhxhxhxhxcxcx'
+
+# List all files colorized in long format, excluding . and ..
+alias la="ls -lAF ${colorflag}"
